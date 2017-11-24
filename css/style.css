@@ -111,7 +111,7 @@ a.ghost:hover {
 .user {
   width:256px;
   height:256px;
-  background:url(https://raw.githubusercontent.com/ManzDev/codevember2017/master/assets/chars.png);
+  background:url(../lisa.png);
   -webkit-animation:beat .5s linear infinite alternate;
           animation:beat .5s linear infinite alternate;
   position:relative;
@@ -127,16 +127,6 @@ a.ghost:hover {
 .computer .user { background-position: -256px -768px }
 .manz .user { background-position:0 -768px }
 
-.sunglasses {
-  position:absolute;
-  width:256px;
-  height:256px;
-  background:url(https://cdn.rawgit.com/ManzDev/codevember2017/master/assets/sunglasses.png) no-repeat;
-  -webkit-transform-origin:50% 30%;
-          transform-origin:50% 30%;
-  -webkit-animation:beat .5s ease alternate infinite;
-          animation:beat .5s ease alternate infinite; 
-}
 
 .zebra .sunglasses { top:45px; left:48px }
 .rocket .sunglasses { top:87px; left:49px }
