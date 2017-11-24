@@ -7,20 +7,30 @@
   
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confetti.css">
 
   
 </head>
 
 <body>
+
   <div class="page">
+      <canvas id='confeti'></canvas>
+      
   <div class="data" style="padding: 20px;">
+
     <h1>Grattis Lisa</h1>
     <h2>#tjugaärtjugoomettår</h2>
     <!-- <a class="ghost" href="https://twitter.com/Manz" target="_blank">Code by Manz</a>
     <a class="ghost" href="https://soundcloud.com/janyork" target="_blank">Music by Janyork</a> -->
   </div>
+
+
   
   <div id="screen">
+
+    
+    
     <a href="#" class="prev" onClick="prev()">◀</a>
     <div class="circle rocket" onClick="next()">
       <div class="user"></div>   
@@ -30,9 +40,13 @@
   </div>
   
 </div>
+</canvas>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.min.js'></script>
 
+    
+    <script  src="js/confetti.js"></script>
     <script  src="js/index.js"></script>
+    
 
 </body>
 </html>
