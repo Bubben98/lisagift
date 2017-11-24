@@ -41,6 +41,7 @@ h2 {
 }
 
 a.ghost:hover {
+  -webkit-transition:all .5s linear;
   transition:all .5s linear;
   border-color:#7e59dd;
   color:#7e59dd;
@@ -60,13 +61,26 @@ a.ghost:hover {
   background:#CCC;
   border-radius:50%;
   margin:200px auto;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:center;
-  align-items:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
   position:relative;
-  animation:circle 5s linear infinite;
+  -webkit-animation:circle 5s linear infinite;
+          animation:circle 5s linear infinite;
   box-shadow:0 0 15px 2px #4800ff;
+  background:-webkit-repeating-linear-gradient(top, #4800ff, #4800ff 25px, #000, #000 50px);
   background:repeating-linear-gradient(180deg, #4800ff, #4800ff 25px, #000, #000 50px);
+}
+
+@-webkit-keyframes circle {
+  0% { background-position:0 0 }
+  100% { background-position:450px 450px }
 }
 
 @keyframes circle {
@@ -74,21 +88,32 @@ a.ghost:hover {
   100% { background-position:450px 450px }
 }
 
+@-webkit-keyframes beat {
+  0% { -webkit-transform:scale(1); transform:scale(1) }
+  100% { -webkit-transform:scale(1.2); transform:scale(1.2) }
+}
+
 @keyframes beat {
-  0% { transform:scale(1) }
-  100% { transform:scale(1.2) }
+  0% { -webkit-transform:scale(1); transform:scale(1) }
+  100% { -webkit-transform:scale(1.2); transform:scale(1.2) }
+}
+
+@-webkit-keyframes move {
+  0% { -webkit-transform:translateY(0); transform:translateY(0) }
+  100% { -webkit-transform:translateY(-8px); transform:translateY(-8px) }
 }
 
 @keyframes move {
-  0% { transform:translateY(0) }
-  100% { transform:translateY(-8px) }
+  0% { -webkit-transform:translateY(0); transform:translateY(0) }
+  100% { -webkit-transform:translateY(-8px); transform:translateY(-8px) }
 }
 
 .user {
   width:256px;
   height:256px;
   background:url(https://raw.githubusercontent.com/ManzDev/codevember2017/master/assets/chars.png);
-  animation:beat .5s linear infinite alternate;
+  -webkit-animation:beat .5s linear infinite alternate;
+          animation:beat .5s linear infinite alternate;
   position:relative;
 /*   transition:all .5s linear;    */
 }
@@ -107,8 +132,10 @@ a.ghost:hover {
   width:256px;
   height:256px;
   background:url(https://cdn.rawgit.com/ManzDev/codevember2017/master/assets/sunglasses.png) no-repeat;
-  transform-origin:50% 30%;
-  animation:beat .5s ease alternate infinite; 
+  -webkit-transform-origin:50% 30%;
+          transform-origin:50% 30%;
+  -webkit-animation:beat .5s ease alternate infinite;
+          animation:beat .5s ease alternate infinite; 
 }
 
 .zebra .sunglasses { top:45px; left:48px }
@@ -141,7 +168,8 @@ a.ghost:hover {
 }
 
 .prev:hover, .next:hover {
-  filter:drop-shadow(0 0 5px #FFF);
+  -webkit-filter:drop-shadow(0 0 5px #FFF);
+          filter:drop-shadow(0 0 5px #FFF);
   color:#000;
 }
 
@@ -155,13 +183,22 @@ a.ghost:hover {
 }
 
 .data h1 {
-  animation:music 7.725s ease infinite;
+  -webkit-animation:music 7.725s ease infinite;
+          animation:music 7.725s ease infinite;
+}
+
+@-webkit-keyframes music {
+  0%, 6%, 12%, 18% { -webkit-transform:rotate(0); transform:rotate(0) }
+  3%, 9%, 15% { -webkit-transform:rotate(-10deg); transform:rotate(-10deg) }
+
+  50%, 56%, 62%, 68% { -webkit-transform:rotate(0deg); transform:rotate(0deg) }
+  53%, 59%, 65% { -webkit-transform:rotate(10deg); transform:rotate(10deg) }
 }
 
 @keyframes music {
-  0%, 6%, 12%, 18% { transform:rotate(0) }
-  3%, 9%, 15% { transform:rotate(-10deg) }
+  0%, 6%, 12%, 18% { -webkit-transform:rotate(0); transform:rotate(0) }
+  3%, 9%, 15% { -webkit-transform:rotate(-10deg); transform:rotate(-10deg) }
 
-  50%, 56%, 62%, 68% { transform:rotate(0deg) }
-  53%, 59%, 65% { transform:rotate(10deg) }
+  50%, 56%, 62%, 68% { -webkit-transform:rotate(0deg); transform:rotate(0deg) }
+  53%, 59%, 65% { -webkit-transform:rotate(10deg); transform:rotate(10deg) }
 }
