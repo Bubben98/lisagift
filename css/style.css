@@ -232,6 +232,13 @@ a.ghost:hover {
 
 @media only screen and (max-width: 750px) {
   #screen {
-    padding: 40px 0;
+    padding: 20px 0;
     }
+  h1{
+    font-size: 54px;
+  }
+  h2{
+    font-size: 22px;
+  }
+
 }
