@@ -230,9 +230,13 @@ a.ghost:hover {
   53%, 59%, 65% { -webkit-transform:rotate(10deg); transform:rotate(10deg) }
 }
 
-@media only screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
+  #timer{
+    display:none;
+  }
   #screen {
     padding: 20px 0;
+
     }
   h1{
     font-size: 54px;
@@ -240,5 +244,6 @@ a.ghost:hover {
   h2{
     font-size: 22px;
   }
+  
 
 }
